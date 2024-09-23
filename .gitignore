@@ -1,0 +1,24 @@
+# Ignore executable
+triangle
+
+# Ignore object files
+*.o
+
+# Ignore dependency files
+*.d
+
+# Ignore build output directories (optional, depending on your build setup)
+build/
+bin/
+
+# Ignore editor and IDE-specific files (optional, based on the tools you're using)
+.vscode/
+.idea/
+
+# Ignore core dumps
+core
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
