@@ -40,6 +40,14 @@ Run the executable:
 ./triangle
 ```
 
+## Compile for Web
+
+Requires [emcc](https://emscripten.org/docs/getting_started/downloads.html)
+
+```bash
+emcc main.c -o docs/index.html -s USE_SDL=2 -s FULL_ES2=1 -s MIN_WEBGL_VERSION=2 -s MAX_WEBGL_VERSION=2 -s WASM=1
+```
+
 ## Project Structure
 
 ```
