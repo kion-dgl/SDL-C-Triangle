@@ -1,7 +1,5 @@
 # OpenGL ES 2.0 Blue Triangle Example
 
-![Preview](./preview.png)
-
 This is a simple C program that uses SDL2 and OpenGL ES 2.0 to create a window and render a blue triangle. It serves as a basic introduction to setting up an OpenGL ES 2.0 rendering context on Linux using SDL2.
 
 ## Requirements
@@ -24,8 +22,8 @@ sudo apt install libsdl2-dev libgles2-mesa-dev gcc make
 Clone this repository:
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-directory>
+git clone https://github.com/kion-dgl/SDL-C-Triangle.git
+cd SDL-C-Triangle
 ```
 
 Build the project using the provided Makefile:
@@ -40,18 +38,24 @@ Run the executable:
 ./triangle
 ```
 
+![Preview](./preview.png)
+
 ## Compile for Web
 
 Requires [emcc](https://emscripten.org/docs/getting_started/downloads.html)
 
 ```bash
-emcc main.c -o docs/index.html -s USE_SDL=2 -s FULL_ES2=1 -s MIN_WEBGL_VERSION=2 -s MAX_WEBGL_VERSION=2 -s WASM=1
+make web
+python3 -m http.server 8080 --directory ./docs
 ```
+
+![Preview](./web.png)
 
 ## Project Structure
 
 ```
 .
+├── docs/           # The compiled webasm
 ├── main.c          # The main C program
 ├── Makefile        # Makefile to build the project
 ├── .gitignore      # Files to be ignored by Git
